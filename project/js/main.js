@@ -7,3 +7,14 @@ function showPicture(){
   // jQuery can do a lot of crazy stuff, so make sure to Google around to find out more
   
 }
+
+$(document).ready(function(){
+  getWeather();
+})
+
+function getWeather() {
+  var url= "api.openweathermap.org/data/2.5/weather?q=Boston&appid="+apiKey;
+  $.ajax(url,{success: function(data){
+    console.log(data);
+  }})
+}
