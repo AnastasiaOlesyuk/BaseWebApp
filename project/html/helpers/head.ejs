@@ -25,6 +25,32 @@
 
 <script> var apiKey="<%= process.env.API_KEY %>";</script>
 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "<%= process.env.FIREBASE_API_KEY %>",
+    authDomain: "webapp-52f51.firebaseapp.com",
+    databaseURL: "https://webapp-52f51-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "webapp-52f51",
+    storageBucket: "webapp-52f51.appspot.com",
+    messagingSenderId: "531959283022",
+    appId: "1:531959283022:web:2760ddca5fcf11a600721f",
+    measurementId: "G-PPG0D3HQ04"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
 
 <!-- then our app's own js file -->
 <script src="js/main.js"></script>
